@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Your meta tags, stylesheets, and title here -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11.0.7/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>All Topics</title>
+  </head>
+  <body>
+    <div class="container mt-0">
+      <h1 class="text-center r_code mb-4 r_clr">
+        Radial <span class="text-black">Code</span>
+      </h1>
+      <div class="d-flex align-items-center justify-content-between">
+        <!-- Your HTML content here -->
+        <select id="monthDropdown" placeholder="MM">
+          <!-- Your month options here -->
+          <option
+            name=""
+            value=""
+            class="fw-bold heading pointer mt-5 w-100 p-4"
+            style="display: none"
+          >
+            Month
+          </option>
+          <option name="January" value="Jan">January</option>
+          <option name="February" value="Feb">February</option>
+          <option name="March" value="Mar">March</option>
+          <option name="April" value="Apr">April</option>
+          <option name="May" value="May">May</option>
+          <option name="June" value="Jun">June</option>
+          <option name="July" value="Jul">July</option>
+          <option name="August" value="Aug">August</option>
+          <option name="September" value="Sep">September</option>
+          <option name="October" value="Oct">October</option>
+          <option name="November" value="Nov">November</option>
+          <option name="December" value="Dec">December</option>
+        </select>
+        <div
+          class="d-flex flex-column position-relative align-items-center mb-3 gap-3 pointer"
+        >
+          <!-- <h2 class="mb-0">Vishnu Bishnoi (371)</h2> -->
+
+          <img
+            id="profileImage"
+            class="profile"
+            src="./Assets/images/profile.png"
+            alt="Profile Picture"
+          />
+          <div
+            id="profileCard"
+            class="card position-absolute top-100"
+            style="display: none"
+          >
+            <div class="card-body">
+              <div class="d-flex justify-content-center">
+                <img
+                  class="profile mx-auto"
+                  src="./Assets/images/1680082743634.jpg"
+                  alt="Profile Picture"
+                />
+              </div>
+              <h3 class="text-center">vishnubishnoi0371</h3>
+              <a
+                href="mailto:vishnukhicher49@gmail.com"
+                class="text-center fs-6 fw-bold"
+                >vishnukhicher49@gmail.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tasksContainer"></div>
+    </div>
+    <script src="./Assets/js/app.js"></script>
+    <script>
+      const tasksContainer = document.getElementById("tasksContainer");
+
+      const tasksByMonth = {
+        Jan: ` <div class= "main_card"><h1 class="text-center tsk_crd">January Task's</h1>
+        <div class="task-item"><div class="small_crd">
+          <h3>Furniture:</h3>
+          <p>
+            Github_Link -
+            <a target="_blank" href="https://github.com/vishnubishnoi0371/Furniture.git">
+                https://github.com/vishnubishnoi0371/Furniture.git            </a>
+          </p>
+          <p>
+            Live_Link -
+            <a target="_blank" href="https://furniture-seven-beryl.vercel.app/">
+                https://furniture-seven-beryl.vercel.app/
+            </a>
+          </p></div><div class="small_crd">
+          <h3>FT_Plane:</h3>
+          <p>
+            Github_Link -
+            <a target="_blank" href="https://github.com/vishnubishnoi0371/FT-plane.git">
+                https://github.com/vishnubishnoi0371/FT-plane.git           </a>
+          </p>
+          <p>
+            Live_Link -
+            <a target="_blank" href="https://ft-plane-zeta.vercel.app/">
+                https://ft-plane-zeta.vercel.app/            </a>
+          </p></div><div class="small_crd">
+          <h3>Lemonware:</h3>
+          <p>
+            Github_Link -
+            <a target="_blank" href="https://github.com/vishnubishnoi0371/LEMONWARES.git">
+                https://github.com/vishnubishnoi0371/LEMONWARES.git           </a>
+          </p>
+          <p>
+            Live_Link -
+            <a target="_blank" href="https://lemonwares.vercel.app/">
+                https://lemonwares.vercel.app/            </a>
+          </p></div><div class="small_crd">
+          <h3>DompKong:</h3>
+          <p>
+            Github_Link -
+            <a target="_blank" href="https://github.com/vishnubishnoi0371/dompkong.git">
+                https://github.com/vishnubishnoi0371/dompkong.git           </a>
+          </p>
+          <p>
+            Live_Link -
+            <a target="_blank" href="https://dompkong.vercel.app/">
+                https://dompkong.vercel.app/            </a>
+          </p></div></div>
+        </div>`,
+        Feb: `<div class= "main_card"><h1 class="text-center tsk_crd">Febuary Task's</h1>
+        <div class="task-item"><div class="small_crd">
+          <h1>Nex_AI:</h1>
+          <p>
+            Github_Link -
+            <a target="_blank" href="https://github.com/vishnubishnoi0371/NEX_AI.git">
+                https://github.com/vishnubishnoi0371/NEX_AI.git            </a>
+          </p>
+          <p>
+            Live_Link -
+            <a target="_blank" href="https://nex-ai-red.vercel.app/">
+              https://nex-ai-red.vercel.app/
+            </a>
+          </p>
+          </div><div class="small_crd">
+          <h1>Dino_LFG:</h1>
+          <p>
+            Github_Link -
+            <a target="_blank" href="https://github.com/vishnubishnoi0371/DINO_LFG.git">
+                https://github.com/vishnubishnoi0371/DINO_LFG.git            </a>
+          </p>
+          <p>
+            Live_Link -
+            <a target="_blank" href="https://dino-lfg-iota.vercel.app/">
+                https://dino-lfg-iota.vercel.app/            </a>
+          </p>
+          </div><div class="small_crd">
+          <h1>Exclusive_games:</h1>
+          <p>
+            Github_Link -
+            <a target="_blank" href="https://github.com/vishnubishnoi0371/exclusive-game.git">
+                https://github.com/vishnubishnoi0371/exclusive-game.git            </a>
+          </p>
+          <p>
+            Live_Link -
+            <a target="_blank" href="https://exclusive-game.vercel.app/">
+                https://exclusive-game.vercel.app/            </a>
+          </p>
+          </div><div class="small_crd">
+          <h1>Calculator:</h1>
+          <p>
+            Github_Link -
+            <a target="_blank" href="https://github.com/vishnubishnoi0371/calculator_1.git">
+                https://github.com/vishnubishnoi0371/calculator_1.git            </a>
+          </p>
+          <p>
+            Live_Link -
+            <a target="_blank" href="https://calculator-1-omega.vercel.app/">
+                https://calculator-1-omega.vercel.app/        </a>
+          </p>
+          </div></div>
+        </div>`,
+        Mar: `<div class= "main_card"><h1 class="text-center tsk_crd">March Task's</h1>
+        <div class="task-item"><div class="small_crd">
+          <h1>248_Labb Page:</h1>
+          <p>
+            Github_Link -
+            <a target="_blank" href="https://github.com/vishnubishnoi0371/Labs248.git">
+              https://github.com/vishnubishnoi0371/Labs248.git
+            </a>
+          </p>
+          <p>
+            Live_Link -
+            <a target="_blank" href="https://labs248-psi.vercel.app/">
+              https://labs248-psi.vercel.app/
+            </a>
+          </p></div><div class="small_crd">
+          <h1>Cloopp Page:</h1>
+          <p>
+            Github_Link -
+            <a target="_blank" href="https://github.com/vishnubishnoi0371/cloopp.git">
+              https://github.com/vishnubishnoi0371/cloopp.git
+            </a>
+          </p>
+          <p>
+            Live_Link -
+            <a target="_blank" href="https://cloopp-naman-398.netlify.app/">
+              https://cloopp-naman-398.netlify.app/
+            </a>
+          </p></div><div class="small_crd">
+          <h1>Next-js-routing :</h1>
+            <div>
+              <div class="d-flex align-items-center gap-4">
+                <p class="fs_20 text-black mb-0">Github_Link -</p>
+                <a
+                  target="blank"
+                  href="https://github.com/vishnubishnoi0371/practice.git"
+                >
+                  https://github.com/vishnubishnoi0371/practice.git
+                </a>
+              </div>
+              <br />
+              <div class="d-flex align-items-center gap-4">
+                <p class="fs_20 text-black mb-0">Live_Link -</p>
+                <a target="blank" href="https://practice-pqfc.vercel.app/">
+                  https://practice-pqfc.vercel.app/
+                </a>
+              </div>
+            </div></div><div class="small_crd">
+            <h1>Swiper in HTML :</h1>
+            <div>
+              <div class="d-flex align-items-center gap-4">
+                <p class="fs_20 text-black mb-0">Github_Link -</p>
+                <a
+                  target="blank"
+                  href=" https://github.com/vishnubishnoi0371/html_swipe.git "
+                >
+                  https://github.com/vishnubishnoi0371/html_swipe.git
+                </a>
+              </div>
+              <br />
+              <div class="d-flex align-items-center gap-4">
+                <p class="fs_20 text-black mb-0">Live_Link -</p>
+                <a target="blank" href="https://html-swipe.netlify.app/">
+                  https://html-swipe.netlify.app/
+                </a>
+              </div>
+            </div></div><div class="small_crd">
+            <h1>Slide in HTML :</h1>
+            <div>
+              <div class="d-flex align-items-center gap-4">
+                <p class="fs_20 text-black mb-0">Github_Link -</p>
+                <a
+                  target="blank"
+                  href=" https://github.com/vishnubishnoi0371/html_slide.git "
+                >
+                  https://github.com/vishnubishnoi0371/html_slide.git
+                </a>
+              </div>
+              <br />
+              <div class="d-flex align-items-center gap-4">
+                <p class="fs_20 text-black mb-0">Live_Link -</p>
+                <a target="blank" href="https://html-slide.vercel.app/">
+                  https://html-slide.vercel.app/
+                </a>
+              </div>
+            </div></div><div class="small_crd">
+            <h1>Vite :</h1>
+            <div>
+              <div class="d-flex align-items-center gap-4">
+                <p class="fs_20 text-black mb-0">Github_Link -</p>
+                <a
+                  target="blank"
+                  href=" https://github.com/vishnubishnoi0371/vite-demo.git "
+                >
+                  https://github.com/vishnubishnoi0371/vite-demo.git
+                </a>
+              </div>
+              <br />
+              <div class="d-flex align-items-center gap-4">
+                <p class="fs_20 text-black mb-0">Live_Link -</p>
+                <a target="blank" href="https://vite-demo-peach.vercel.app/">
+                  https://vite-demo-peach.vercel.app/
+                </a>
+              </div>
+            </div></div>
+            <div class="small_crd">
+            <h1>Form , Map , Props , Swiper , Slider in react :</h1>
+            <div>
+              <div class="d-flex align-items-center gap-4">
+                <p class="fs_20 text-black mb-0">Github_Link -</p>
+                <a
+                  target="blank"
+                  href=" https://github.com/vishnubishnoi0371/form-validation.git  "
+                >
+                  https://github.com/vishnubishnoi0371/form-validation.git
+                </a>
+              </div>
+              <br />
+              <div class="d-flex align-items-center gap-4">
+                <p class="fs_20 text-black mb-0">Live_Link -</p>
+                <a
+                  target="blank"
+                  href="https://form-validation-seven-mocha.vercel.app/  "
+                >
+                  https://form-validation-seven-mocha.vercel.app/
+                </a>
+              </div>
+            </div></div>
+            </div>
+        </div>`,
+        Apr: `<div class= "main_card"><h1 class="text-center tsk_crd">April Task's</h1>
+        <div class="task-item"><div class="small_crd">
+          <h1>empty</h1></div>
+          </div>
+        </div>`,
+        May: `<div class= "main_card"><h1 class="text-center tsk_crd">May Task's</h1>
+        <div class="task-item"><div class="small_crd">
+          <h1>Empty</h1>
+         
+          </div></div>
+        </div>`,
+        Jun: `<div class= "main_card"><h1 class="text-center tsk_crd">June Task's</h1>
+        <div class="task-item"><div class="small_crd">
+          <h1>Empty:</h1>
+          
+          </div></div>
+        </div>`,
+        Jul: `<div class= "main_card"><h1 class="text-center tsk_crd">July Task's</h1>
+        <div class="task-item"><div class="small_crd">
+            <h1>Empty</h1>
+
+          </div></div>
+        </div>`,
+        Aug: `<div class= "main_card"><h1 class="text-center tsk_crd">August Task's</h1>
+        <div class="task-item"><div class="small_crd">
+            <h1>Empty</h1>
+
+          </div></div>
+        </div>`,
+        Sept: `<div class= "main_card"><h1 class="text-center tsk_crd">September Task's</h1>
+        <div class="task-item"><div class="small_crd">
+            <h1>Empty</h1>
+
+          </div></div>
+        </div>`,
+        Oct: `<div class= "main_card"><h1 class="text-center tsk_crd">October Task's</h1>
+        <div class="task-item"><div class="small_crd">
+            <h1>Empty</h1>
+
+          </div></div>
+        </div>`,
+        Nov: `<div class= "main_card"><h1 class="text-center tsk_crd">November Task's</h1>
+        <div class="task-item"><div class="small_crd">
+            <h1>Empty</h1>
+
+          </div></div>
+        </div>`,
+        Dec: `<div class= "main_card"><h1 class="text-center tsk_crd">December Task's</h1>
+        <div class="task-item"><div class="small_crd">
+            <h1>Empty</h1>
+
+          </div></div>
+        </div>`,
+        // Add tasks for other months as needed
+      };
+
+      const monthDropdown = document.getElementById("monthDropdown");
+
+      monthDropdown.addEventListener("change", function () {
+        const selectedMonth = this.value;
+        tasksContainer.innerHTML = tasksByMonth[selectedMonth] || "";
+      });
+    </script>
+  </body>
+</html>
