@@ -10,12 +10,7 @@
 .swiper {
   max-width: 500px;
 }
-/* .d-flex {
-  display: flex;
-}
-.align-center {
-  align-items: center;
-} */
+
 .pt-50 {
   padding-top: 50px;
 }
@@ -24,15 +19,16 @@
 }
 .imgs_set {
   max-width: 100%;
-  height: 100%;
+  max-height: 100% !important;
 }
 
 .main_card {
+  background: gray;
   border: 2px solid black;
   border-radius: 10px;
   width: 100%;
   max-width: 100%;
-  padding: 30px;
+  padding: 10px;
   margin-top: 20px;
 }
 .tsk_crd {
@@ -43,7 +39,11 @@
 .pointer {
   cursor: pointer;
 }
+.small_crd:hover .imgs_set {
+  transform: translate3d(20%);
+}
 .small_crd {
+  background: white;
   border: 3px solid black;
   margin-top: 10px;
   padding: 10px;
@@ -103,6 +103,9 @@ select {
 @media (min-width: 768px) {
   .imgs_set {
     max-width: 300px;
-    height: 100%;
+  }
+
+  .main_card {
+    padding: 30px;
   }
 }

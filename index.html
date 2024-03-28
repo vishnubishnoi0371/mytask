@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Your meta tags, stylesheets, and title here -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./Assets/css/style.css" />
@@ -25,18 +24,19 @@
   </head>
   <body>
     <div class="container mt-0">
-      <h1 class="text-center r_code mb-4 r_clr">
-        Radial <span class="text-black">Code</span>
+      <h1 class="text-center r_code pointer mb-4 r_clr">
+        Radial <span class="text-black code">Code</span>
       </h1>
       <div class="d-flex items-center justify-content-between">
-        <select id="monthDropdown" placeholder="MM">
+        <select id="monthDropdown" class="pointer" placeholder="MM">
           <option
+            id="defaultMonth"
             name=""
             value=""
-            class="fw-bold heading pointer mt-5 w-100 p-4"
+            class="fw-bold heading pointer min-vh-100 mt-5 w-100 p-4"
             style="display: none"
           >
-            Month
+            March
           </option>
           <option name="January" value="Jan">January</option>
           <option name="February" value="Feb">February</option>
@@ -52,7 +52,7 @@
           <option name="December" value="Dec">December</option>
         </select>
         <div
-          class="flex flex-column position-relative align-items-center mb-3 gap-3 pointer"
+          class="flex flex-col position-relative align-items-center mb-3 gap-3 pointer"
         >
           <img
             id="profileImage"
@@ -91,7 +91,7 @@
 
       const tasksByMonth = {
         Jan: ` <div class= "main_card"><h1 class="text-center tsk_crd">January Task's</h1>
-        <div class="task-item"><div class="small_crd flex  flex-column flex-md-row  justify-content-lg-between">
+        <div class="task-item"><div class="small_crd flex  flex-col flex-md-row  justify-content-lg-between">
           <div>
           <h3>Furniture:</h3>
           <p>
@@ -99,7 +99,7 @@
             <a target="_blank" href="https://github.com/vishnubishnoi0371/Furniture.git">
                 https://github.com/vishnubishnoi0371/Furniture.git            </a>
           </p>
-          <p>
+          <p class="d-flex flex-column flex-lg-row">
             Live_Link -
             <a target="_blank" href="https://furniture-seven-beryl.vercel.app/">
                 https://furniture-seven-beryl.vercel.app/
@@ -108,90 +108,90 @@
           
           <img class="imgs_set" src="./Assets/images/furniture.png" alt="">
 
-          </div><div class="small_crd flex flex-column flex-md-row  justify-content-lg-between"><div>
+          </div><div class="small_crd d-flex flex-column flex-lg-row  justify-content-lg-between"><div>
           <h3>FT_Plane:</h3>
           <p>
             Github_Link -
             <a target="_blank" href="https://github.com/vishnubishnoi0371/FT-plane.git">
                 https://github.com/vishnubishnoi0371/FT-plane.git           </a>
           </p>
-          <p>
+          <p class="d-flex flex-column flex-lg-row">
             Live_Link -
             <a target="_blank" href="https://ft-plane-zeta.vercel.app/">
                 https://ft-plane-zeta.vercel.app/            </a>
           </p></div>          <img class="imgs_set" src="./Assets/images/plane.png" alt="">
-</div><div class="small_crd flex flex-column flex-md-row  justify-content-lg-between"><div>
+</div><div class="small_crd d-flex flex-column flex-lg-row  justify-content-lg-between"><div>
           <h3>Lemonware:</h3>
           <p>
             Github_Link -
             <a target="_blank" href="https://github.com/vishnubishnoi0371/LEMONWARES.git">
                 https://github.com/vishnubishnoi0371/LEMONWARES.git           </a>
           </p>
-          <p>
+          <p class="d-flex flex-column flex-lg-row">
             Live_Link -
             <a target="_blank" href="https://lemonwares.vercel.app/">
                 https://lemonwares.vercel.app/            </a>
           </p></div>          <img class="imgs_set" src="./Assets/images/lemonware.png" alt="">
-</div><div class="small_crd flex flex-column flex-md-row  justify-content-lg-between"><div>
+</div><div class="small_crd d-flex flex-column flex-lg-row  justify-content-lg-between"><div>
           <h3>DompKong:</h3>
           <p>
             Github_Link -
             <a target="_blank" href="https://github.com/vishnubishnoi0371/dompkong.git">
                 https://github.com/vishnubishnoi0371/dompkong.git           </a>
           </p>
-          <p>
+          <p class="d-flex flex-column flex-lg-row">
             Live_Link -
             <a target="_blank" href="https://dompkong.vercel.app/">
                 https://dompkong.vercel.app/            </a>
           </p> </div>         <img class="imgs_set" src="./Assets/images/domp.png" alt="">
 </div></div>
         </div>`,
-        Feb: `<div class= "main_card"><h1 class="text-center tsk_crd">Febuary Task's</h1>
-        <div class="task-item"><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd"><div>
-          <h1>Nex_AI:</h1>
+        Feb: `<div class= "main_card"><h1 class="text-center tsk_crd">February Task's</h1>
+        <div class="task-item"><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd"><div>
+          <h1 class="text-center text-md-start">Nex_AI:</h1>
           <p>
             Github_Link -
             <a target="_blank" href="https://github.com/vishnubishnoi0371/NEX_AI.git">
                 https://github.com/vishnubishnoi0371/NEX_AI.git            </a>
           </p>
-          <p>
+          <p class="d-flex flex-column flex-lg-row">
             Live_Link -
             <a target="_blank" href="https://nex-ai-red.vercel.app/">
               https://nex-ai-red.vercel.app/
             </a>
           </p></div><img class="imgs_set" src="./Assets/images/ai.png" alt="">
-          </div><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd"><div>
-          <h1>Dino_LFG:</h1>
+          </div><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd"><div>
+          <h1 class="text-center text-md-start">Dino_LFG:</h1>
           <p>
             Github_Link -
             <a target="_blank" href="https://github.com/vishnubishnoi0371/DINO_LFG.git">
                 https://github.com/vishnubishnoi0371/DINO_LFG.git            </a>
           </p>
-          <p>
+          <p class="d-flex flex-column flex-lg-row">
             Live_Link -
             <a target="_blank" href="https://dino-lfg-iota.vercel.app/">
                 https://dino-lfg-iota.vercel.app/            </a>
           </p></div><img class="imgs_set" src="./Assets/images/dino-lfg.png" alt="">
-          </div><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd"><div>
-          <h1>Exclusive_games:</h1>
+          </div><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd"><div>
+          <h1 class="text-center text-md-start">Exclusive_games:</h1>
           <p>
             Github_Link -
             <a target="_blank" href="https://github.com/vishnubishnoi0371/exclusive-game.git">
                 https://github.com/vishnubishnoi0371/exclusive-game.git            </a>
           </p>
-          <p>
+          <p class="d-flex flex-column flex-lg-row">
             Live_Link -
             <a target="_blank" href="https://exclusive-game.vercel.app/">
                 https://exclusive-game.vercel.app/            </a>
           </p></div><img class="imgs_set" src="./Assets/images/games.png" alt="">
-          </div><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd"><div>
-          <h1>Calculator:</h1>
+          </div><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd"><div>
+          <h1 class="text-center text-md-start">Calculator:</h1>
           <p>
             Github_Link -
             <a target="_blank" href="https://github.com/vishnubishnoi0371/calculator_1.git">
                 https://github.com/vishnubishnoi0371/calculator_1.git            </a>
           </p>
-          <p>
+          <p class="d-flex flex-column flex-lg-row">
             Live_Link -
             <a target="_blank" href="https://calculator-1-omega.vercel.app/">
                 https://calculator-1-omega.vercel.app/        </a>
@@ -199,36 +199,36 @@
           </div><img class="imgs_set " src="./Assets/images/calctr.png" alt=""></div>
         </div>`,
         Mar: `<div class= "main_card"><h1 class="text-center tsk_crd">March Task's</h1>
-        <div class="task-item"><div class="flex flex-column flex-md-row flex-column flex-md-row  justify-content-lg-between small_crd"><div>
-          <h1>248_Labb Page:</h1>
-          <p class="flex flex-column flex-md-row">
+        <div class="task-item"><div class="d-flex flex-column flex-lg-row flex-col flex-md-row  justify-content-lg-between small_crd"><div>
+          <h1 class="text-center text-md-start">248_Labb Page:</h1>
+          <p class="d-flex flex-column flex-lg-row">
             Github_Link -
             <a target="_blank" href="https://github.com/vishnubishnoi0371/Labs248.git">
               https://github.com/vishnubishnoi0371/Labs248.git
             </a>
           </p>
-          <p class="flex flex-column flex-md-row">
+          <p class="d-flex flex-column flex-lg-row">
             Live_Link -
             <a target="_blank" href="https://labs248-psi.vercel.app/">
               https://labs248-psi.vercel.app/
             </a>
-          </p></div><img class="imgs_set " src="./Assets/images/labb.png" alt=""></div><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd"><div>
-          <h1>Cloopp Page:</h1>
-          <p class="flex flex-column flex-md-row">
+          </p></div><img class="imgs_set " src="./Assets/images/labb.png" alt=""></div><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd"><div>
+          <h1 class="text-center text-md-start">Cloopp Page:</h1>
+          <p class="d-flex flex-column flex-lg-row">
             Github_Link -
             <a target="_blank" href="https://github.com/vishnubishnoi0371/cloopp.git">
               https://github.com/vishnubishnoi0371/cloopp.git
             </a>
           </p>
-          <p class="flex flex-column flex-md-row">
+          <p class="d-flex flex-column flex-lg-row">
             Live_Link -
             <a target="_blank" href="https://cloopp-pink.vercel.app/">
               https://cloopp-pink.vercel.app/
             </a>
-          </p></div><img class="imgs_set " src="./Assets/images/cloopp.png" alt=""></div><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd"><div>
-          <h1>Next-Js : <span class="fs-2">Map, Props , Routing</span></h1>
+          </p></div><img class="imgs_set " src="./Assets/images/cloopp.png" alt=""></div><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd"><div>
+          <h1 class="text-center text-md-start">Next-Js : <span class="fs-2">Map, Props , Routing</span></h1>
             
-              <div class="flex items-center gap-4">
+              <div class="d-flex align-items-md-center  flex-column flex-lg-row">
                 <p class="fs_20 text-black mb-0">Github_Link -</p>
                 <a
                   target="blank"
@@ -238,16 +238,16 @@
                 </a>
               </div>
               <br />
-              <div class="flex items-center gap-4">
+              <div class="d-flex align-items-md-center  flex-column flex-lg-row">
                 <p class="fs_20 text-black mb-0">Live_Link -</p>
                 <a target="blank" href="https://practice-pqfc.vercel.app/">
                   https://practice-pqfc.vercel.app/
                 </a>
               </div>
-            </div><img class="imgs_set " src="./Assets/images/nxt.jpg" alt=""></div><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd"><div>
-            <h1>Swiper in HTML :</h1>
+            </div><img class="imgs_set " src="./Assets/images/nxt.jpg" alt=""></div><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd"><div>
+            <h1 class="text-center text-md-start">Swiper in HTML :</h1>
             <div>
-              <div class="flex items-center gap-4">
+              <div class="d-flex align-items-md-center  flex-column flex-lg-row">
                 <p class="fs_20 text-black mb-0">Github_Link -</p>
                 <a
                   target="blank"
@@ -257,15 +257,15 @@
                 </a>
               </div>
               <br />
-              <div class="flex items-center gap-4">
+              <div class="d-flex align-items-md-center  flex-column flex-lg-row">
                 <p class="fs_20 text-black mb-0">Live_Link -</p>
                 <a target="blank" href="https://html-swipe.netlify.app/">
                   https://html-swipe.netlify.app/
                 </a>
               </div></div>
-            </div><img class="imgs_set " src="./Assets/images/swiper.jpg" alt=""></div><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd"><div>
-            <h1>Slide in HTML :</h1>
-              <div class="flex items-center gap-4">
+            </div><img class="imgs_set " src="./Assets/images/swiper.jpg" alt=""></div><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd"><div>
+            <h1 class="text-center text-md-start">Slide in HTML :</h1>
+              <div class="d-flex align-items-md-center  flex-column flex-lg-row">
                 <p class="fs_20 text-black mb-0">Github_Link -</p>
                 <a
                   target="blank"
@@ -275,15 +275,15 @@
                 </a>
               </div>
               <br />
-              <div class="flex items-center gap-4">
+              <div class="d-flex align-items-md-center  flex-column flex-lg-row">
                 <p class="fs_20 text-black mb-0">Live_Link -</p>
                 <a target="blank" href="https://html-slide.vercel.app/">
                   https://html-slide.vercel.app/
                 </a>
               </div>
-            </div><img class="imgs_set " src="./Assets/images/slide.jpg" alt=""></div><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd"><div>
-            <h1>Vite :</h1>
-              <div class="flex items-center gap-4">
+            </div><img class="imgs_set " src="./Assets/images/slide.jpg" alt=""></div><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd"><div>
+            <h1 class="text-center text-md-start">Vite Practice :</h1>
+              <div class="d-flex align-items-md-center  flex-column flex-lg-row">
                 <p class="fs_20 text-black mb-0">Github_Link -</p>
                 <a
                   target="blank"
@@ -293,18 +293,18 @@
                 </a>
               </div>
               <br />
-              <div class="flex items-center gap-4">
+              <div class="d-flex align-items-md-center  flex-column flex-lg-row">
                 <p class="fs_20 text-black mb-0">Live_Link -</p>
                 <a target="blank" href="https://vite-demo-peach.vercel.app/">
                   https://vite-demo-peach.vercel.app/
                 </a>
               </div>
             </div><img class="imgs_set " src="./Assets/images/vite.jpg" alt=""></div>
-            <div class="flex flex-column flex-md-row  justify-content-lg-between small_crd">            <div>
+            <div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd">            <div>
 
-            <h1>Form Swiper , Slider in react :</h1>
+            <h1 class="text-wrap text-center text-md-start">Form , Swiper , Slider in react :</h1>
             <div>
-              <div class="flex items-center gap-4">
+              <div class="d-flex align-items-md-center  flex-column flex-lg-row">
                 <p class="fs_20 text-black mb-0">Github_Link -</p>
                 <a
                   target="blank"
@@ -314,7 +314,7 @@
                 </a>
               </div>
               <br />
-              <div class="flex items-center gap-4">
+              <div class="d-flex align-items-md-center  flex-column flex-lg-row">
                 <p class="fs_20 text-black mb-0">Live_Link -</p>
                 <a
                   target="blank"
@@ -327,61 +327,73 @@
             </div>
         </div>`,
         Apr: `<div class= "main_card"><h1 class="text-center tsk_crd">April Task's</h1>
-        <div class="task-item"><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd">
-          <h1>coming soon</h1></div>
+        <div class="task-item"><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd">
+          <h1 class="text-center text-md-start">coming soon....</h1></div>
           </div>
         </div>`,
         May: `<div class= "main_card"><h1 class="text-center tsk_crd">May Task's</h1>
-        <div class="task-item"><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd">
-          <h1>coming soon</h1>
+        <div class="task-item"><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd">
+          <h1 class="text-center text-md-start">coming soon....</h1>
          
           </div></div>
         </div>`,
         Jun: `<div class= "main_card"><h1 class="text-center tsk_crd">June Task's</h1>
-        <div class="task-item"><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd">
-          <h1>coming soon:</h1>
+        <div class="task-item"><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd">
+          <h1 class="text-center text-md-start">coming soon....</h1>
           
           </div></div>
         </div>`,
         Jul: `<div class= "main_card"><h1 class="text-center tsk_crd">July Task's</h1>
-        <div class="task-item"><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd">
-            <h1>coming soon</h1>
+        <div class="task-item"><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd">
+            <h1 class="text-center text-md-start">coming soon....</h1>
 
           </div></div>
         </div>`,
         Aug: `<div class= "main_card"><h1 class="text-center tsk_crd">August Task's</h1>
-        <div class="task-item"><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd">
-            <h1>coming soon</h1>
+        <div class="task-item"><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd">
+            <h1 class="text-center text-md-start">coming soon....</h1>
 
           </div></div>
         </div>`,
         Sept: `<div class= "main_card"><h1 class="text-center tsk_crd">September Task's</h1>
-        <div class="task-item"><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd">
-            <h1>coming soon</h1>
+        <div class="task-item"><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd">
+            <h1 class="text-center text-md-start">coming soon....</h1>
 
           </div></div>
         </div>`,
         Oct: `<div class= "main_card"><h1 class="text-center tsk_crd">October Task's</h1>
-        <div class="task-item"><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd">
-            <h1>coming soon</h1>
+        <div class="task-item"><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd">
+            <h1 class="text-center text-md-start">coming soon....</h1>
 
           </div></div>
         </div>`,
         Nov: `<div class= "main_card"><h1 class="text-center tsk_crd">November Task's</h1>
-        <div class="task-item"><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd">
-            <h1>coming soon</h1>
+        <div class="task-item"><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd">
+            <h1 class="text-center text-md-start">coming soon....</h1>
 
           </div></div>
         </div>`,
         Dec: `<div class= "main_card"><h1 class="text-center tsk_crd">December Task's</h1>
-        <div class="task-item"><div class="flex flex-column flex-md-row  justify-content-lg-between small_crd">
-            <h1>coming soon</h1>
+        <div class="task-item"><div class="d-flex flex-column flex-lg-row  justify-content-lg-between small_crd">
+            <h1 class="text-center text-md-start">coming soon....</h1>
 
           </div></div>
         </div>`,
       };
 
       const monthDropdown = document.getElementById("monthDropdown");
+      const defaultMonthOption = document.getElementById("defaultMonth");
+
+      // Get the current month (0-indexed, so January is 0)
+      const currentMonthIndex = new Date().getMonth();
+      const currentMonth = monthDropdown.options[currentMonthIndex + 1].value; // Adding 1 because the default option is at index 0
+
+      // Set the default month option to the current month
+      defaultMonthOption.value = currentMonth;
+
+      // Trigger the change event to display tasks for the current month
+      monthDropdown.value = currentMonth;
+      tasksContainer.innerHTML = tasksByMonth[currentMonth] || "";
 
       monthDropdown.addEventListener("change", function () {
         const selectedMonth = this.value;
